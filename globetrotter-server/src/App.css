@@ -1,0 +1,121 @@
+.App {
+    text-align: center;
+    min-height: 100vh;
+    position: relative;
+}
+
+.quiz-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1;
+}
+
+h1 {
+    color: #4169e1;
+    margin-bottom: 30px;
+}
+
+.btn {
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #4169e1;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #3a5fcd;
+}
+
+.question-header {
+    background-color: #4169e1;
+    color: white;
+    padding: 15px;
+    border-radius: 5px 5px 0 0;
+    margin-bottom: 20px;
+}
+
+.options-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.option {
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.option:hover {
+    background-color: #f0f8ff;
+}
+
+.selected {
+    background-color: #e6f7ff;
+    border-color: #4169e1;
+}
+
+.correct {
+    background-color: #e6ffe6;
+    border-color: green;
+}
+
+.incorrect {
+    background-color: #ffe6e6;
+    border-color: red;
+}
+
+.feedback {
+    padding: 15px;
+    margin-top: 15px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.score-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.confetti {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.confetti-piece {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #ffd700;
+    top: -10px;
+    animation: fall 3s linear infinite;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(100vh) rotate(360deg);
+    }
+}
